@@ -7,7 +7,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
+
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -26,7 +26,6 @@ public class Photo {
     @NotBlank(message = "Image URL is required")
     private String imageUrl;
 
-    @NotNull(message = "Date uploaded is required")
     private LocalDateTime dateUploaded;
 
     private String location;
@@ -38,6 +37,4 @@ public class Photo {
     private String story;
 
     private String technicalNotes;
-
-    private String lifePhaseName;
 }

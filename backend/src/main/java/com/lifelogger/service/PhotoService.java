@@ -93,7 +93,4 @@ public class PhotoService {
         return photoRepository.findByUserIdAndTagsContainingOrderByDateUploadedDesc(userId, tag);
     }
 
-    public List<Photo> filterByLifePhase(String userId, String lifePhaseName) {
-        return photoRepository.findByUserIdAndLifePhaseNameOrderByDateUploadedDesc(userId, lifePhaseName);
-    }
 }

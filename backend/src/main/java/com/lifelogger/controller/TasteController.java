@@ -94,12 +94,4 @@ public class TasteController {
         return ResponseEntity.ok(tastes);
     }
 
-    @GetMapping("/filter/phase/{lifePhaseName}")
-    public ResponseEntity<List<Taste>> filterByLifePhase(
-            @PathVariable String lifePhaseName,
-            Authentication authentication) {
-        String userId = authUtil.getUserId(authentication);
-        List<Taste> tastes = tasteService.filterByLifePhase(userId, lifePhaseName);
-        return ResponseEntity.ok(tastes);
-    }
 }

@@ -88,12 +88,4 @@ public class PlaceController {
         return ResponseEntity.ok(places);
     }
 
-    @GetMapping("/filter/phase/{lifePhaseName}")
-    public ResponseEntity<List<Place>> filterByLifePhase(
-            @PathVariable String lifePhaseName,
-            Authentication authentication) {
-        String userId = authUtil.getUserId(authentication);
-        List<Place> places = placeService.filterByLifePhase(userId, lifePhaseName);
-        return ResponseEntity.ok(places);
-    }
 }

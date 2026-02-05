@@ -22,5 +22,4 @@ public interface TasteRepository extends MongoRepository<Taste, String> {
 
     List<Taste> findByUserIdAndTagsContaining(String userId, String tag);
 
-    List<Taste> findByUserIdAndLifePhaseName(String userId, String lifePhaseName);
 }

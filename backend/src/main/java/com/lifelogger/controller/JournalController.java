@@ -117,12 +117,4 @@ public class JournalController {
         return ResponseEntity.ok(journals);
     }
 
-    @GetMapping("/filter/phase/{lifePhaseName}")
-    public ResponseEntity<List<Journal>> filterByLifePhase(
-            @PathVariable String lifePhaseName,
-            Authentication authentication) {
-        String userId = getUserId(authentication);
-        List<Journal> journals = journalService.filterByLifePhase(userId, lifePhaseName);
-        return ResponseEntity.ok(journals);
-    }
 }

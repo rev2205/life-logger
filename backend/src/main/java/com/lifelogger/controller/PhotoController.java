@@ -78,12 +78,4 @@ public class PhotoController {
         return ResponseEntity.ok(photos);
     }
 
-    @GetMapping("/filter/phase/{lifePhaseName}")
-    public ResponseEntity<List<Photo>> filterByLifePhase(
-            @PathVariable String lifePhaseName,
-            Authentication authentication) {
-        String userId = authUtil.getUserId(authentication);
-        List<Photo> photos = photoService.filterByLifePhase(userId, lifePhaseName);
-        return ResponseEntity.ok(photos);
-    }
 }

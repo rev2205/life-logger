@@ -19,5 +19,4 @@ public interface PlaceRepository extends MongoRepository<Place, String> {
 
     List<Place> findByUserIdAndTagsContaining(String userId, String tag);
 
-    List<Place> findByUserIdAndLifePhaseName(String userId, String lifePhaseName);
 }

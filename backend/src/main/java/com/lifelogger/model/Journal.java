@@ -27,10 +27,8 @@ public class Journal {
     @NotBlank(message = "User ID is required")
     private String userId;
 
-    @NotNull(message = "Date is required")
     private LocalDate date;
 
-    @NotNull(message = "Time is required")
     private LocalTime time;
 
     @NotBlank(message = "Content is required")
@@ -42,8 +40,6 @@ public class Journal {
     private List<String> tags;
 
     private String context;
-
-    private String lifePhaseName;
 
     @CreatedDate
     private LocalDateTime createdAt;

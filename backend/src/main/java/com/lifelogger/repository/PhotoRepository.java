@@ -16,5 +16,4 @@ public interface PhotoRepository extends MongoRepository<Photo, String> {
 
     List<Photo> findByUserIdAndTagsContainingOrderByDateUploadedDesc(String userId, String tag);
 
-    List<Photo> findByUserIdAndLifePhaseNameOrderByDateUploadedDesc(String userId, String lifePhaseName);
 }

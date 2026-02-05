@@ -43,5 +43,4 @@ public class Taste {
 
     private List<String> tags;
 
-    private String lifePhaseName;
 }

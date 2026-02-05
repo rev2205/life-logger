@@ -46,5 +46,4 @@ public class Place {
 
     private List<String> tags;
 
-    private String lifePhaseName;
 }

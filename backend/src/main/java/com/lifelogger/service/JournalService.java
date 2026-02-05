@@ -42,7 +42,6 @@ public class JournalService {
         journal.setMood(journalDetails.getMood());
         journal.setTags(journalDetails.getTags());
         journal.setContext(journalDetails.getContext());
-        journal.setLifePhaseName(journalDetails.getLifePhaseName());
 
         return journalRepository.save(journal);
     }
@@ -98,7 +97,4 @@ public class JournalService {
         return journalRepository.findByUserIdAndContextAndIsDeletedFalse(userId, context);
     }
 
-    public List<Journal> filterByLifePhase(String userId, String lifePhaseName) {
-        return journalRepository.findByUserIdAndLifePhaseNameAndIsDeletedFalse(userId, lifePhaseName);
-    }
 }

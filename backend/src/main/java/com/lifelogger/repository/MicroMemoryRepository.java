@@ -16,5 +16,4 @@ public interface MicroMemoryRepository extends MongoRepository<MicroMemory, Stri
 
     List<MicroMemory> findByUserIdAndTagsContainingOrderByTimestampDesc(String userId, String tag);
 
-    List<MicroMemory> findByUserIdAndLifePhaseNameOrderByTimestampDesc(String userId, String lifePhaseName);
 }

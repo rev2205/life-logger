@@ -63,12 +63,4 @@ public class MicroMemoryController {
         return ResponseEntity.ok(memories);
     }
 
-    @GetMapping("/filter/phase/{lifePhaseName}")
-    public ResponseEntity<List<MicroMemory>> filterByLifePhase(
-            @PathVariable String lifePhaseName,
-            Authentication authentication) {
-        String userId = authUtil.getUserId(authentication);
-        List<MicroMemory> memories = microMemoryService.filterByLifePhase(userId, lifePhaseName);
-        return ResponseEntity.ok(memories);
-    }
 }

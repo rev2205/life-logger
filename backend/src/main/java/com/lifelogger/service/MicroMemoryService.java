@@ -45,7 +45,4 @@ public class MicroMemoryService {
         return microMemoryRepository.findByUserIdAndTagsContainingOrderByTimestampDesc(userId, tag);
     }
 
-    public List<MicroMemory> filterByLifePhase(String userId, String lifePhaseName) {
-        return microMemoryRepository.findByUserIdAndLifePhaseNameOrderByTimestampDesc(userId, lifePhaseName);
-    }
 }

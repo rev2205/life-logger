@@ -38,7 +38,6 @@ public class PlaceService {
         place.setExperienceNote(placeDetails.getExperienceNote());
         place.setMood(placeDetails.getMood());
         place.setTags(placeDetails.getTags());
-        place.setLifePhaseName(placeDetails.getLifePhaseName());
 
         return placeRepository.save(place);
     }
@@ -81,7 +80,4 @@ public class PlaceService {
         return placeRepository.findByUserIdAndTagsContaining(userId, tag);
     }
 
-    public List<Place> filterByLifePhase(String userId, String lifePhaseName) {
-        return placeRepository.findByUserIdAndLifePhaseName(userId, lifePhaseName);
-    }
 }

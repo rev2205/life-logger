@@ -20,10 +20,9 @@ public interface JournalRepository extends MongoRepository<Journal, String> {
 
     List<Journal> findByUserIdAndTagsContainingAndIsDeletedFalse(String userId, String tag);
 
+    List<Journal> findByUserIdAndContextAndIsDeletedFalse(String userId, String context);
+
     @Query("{ 'userId': ?0, 'isDeleted': false, 'content': { $regex: ?1, $options: 'i' } }")
     List<Journal> searchByContent(String userId, String searchText);
 
-    List<Journal> findByUserIdAndContextAndIsDeletedFalse(String userId, String context);
-
-    List<Journal> findByUserIdAndLifePhaseNameAndIsDeletedFalse(String userId, String lifePhaseName);
 }

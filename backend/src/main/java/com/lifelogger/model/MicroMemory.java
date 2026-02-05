@@ -24,7 +24,6 @@ public class MicroMemory {
     @NotBlank(message = "User ID is required")
     private String userId;
 
-    @NotNull(message = "Timestamp is required")
     private LocalDateTime timestamp;
 
     @NotBlank(message = "Short text is required")
@@ -35,6 +34,4 @@ public class MicroMemory {
     private Mood mood;
 
     private List<String> tags;
-
-    private String lifePhaseName;
 }

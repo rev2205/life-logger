@@ -35,7 +35,6 @@ public class TasteService {
         taste.setRating(tasteDetails.getRating());
         taste.setMood(tasteDetails.getMood());
         taste.setTags(tasteDetails.getTags());
-        taste.setLifePhaseName(tasteDetails.getLifePhaseName());
 
         return tasteRepository.save(taste);
     }
@@ -82,7 +81,4 @@ public class TasteService {
         return tasteRepository.findByUserIdAndTagsContaining(userId, tag);
     }
 
-    public List<Taste> filterByLifePhase(String userId, String lifePhaseName) {
-        return tasteRepository.findByUserIdAndLifePhaseName(userId, lifePhaseName);
-    }
 }

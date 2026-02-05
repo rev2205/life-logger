@@ -10,7 +10,7 @@ import Memories from './pages/Memories';
 import Tastes from './pages/Tastes';
 import Places from './pages/Places';
 import Photos from './pages/Photos';
-import LifePhases from './pages/LifePhases';
+
 import Navbar from './components/Navbar';
 
 const PrivateRoute = ({ children }) => {
@@ -40,7 +40,7 @@ function AppRoutes() {
                 <Route path="/tastes" element={<PrivateRoute><Tastes /></PrivateRoute>} />
                 <Route path="/places" element={<PrivateRoute><Places /></PrivateRoute>} />
                 <Route path="/photos" element={<PrivateRoute><Photos /></PrivateRoute>} />
-                <Route path="/phases" element={<PrivateRoute><LifePhases /></PrivateRoute>} />
+
                 <Route path="/" element={<Navigate to={isAuthenticated ? "/dashboard" : "/login"} />} />
             </Routes>
         </>

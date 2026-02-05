@@ -49,9 +49,14 @@ export const placeService = {
 };
 
 export const photoService = {
-    upload: (formData) => api.post('/photos', formData, {
-        headers: { 'Content-Type': 'multipart/form-data' }
-    }),
+    upload: (file, metadata) => {
+        const formData = new FormData();
+        formData.append('file', file);
+        formData.append('metadata', JSON.stringify(metadata));
+        return api.post('/photos', formData, {
+            headers: { 'Content-Type': 'multipart/form-data' }
+        });
+    },
     delete: (id) => api.delete(`/photos/${id}`),
     getAll: () => api.get('/photos'),
     getById: (id) => api.get(`/photos/${id}`),

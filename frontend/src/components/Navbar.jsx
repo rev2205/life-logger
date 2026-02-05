@@ -42,9 +42,7 @@ function Navbar() {
                     <Link to="/photos" className={isActive('/photos') ? 'active' : ''}>
                         Photos
                     </Link>
-                    <Link to="/phases" className={isActive('/phases') ? 'active' : ''}>
-                        Life Phases
-                    </Link>
+
                 </div>
 
                 <div className="navbar-user">

@@ -12,8 +12,7 @@ function JournalForm() {
         content: '',
         mood: 'NEUTRAL',
         tags: '',
-        context: '',
-        lifePhaseName: ''
+        context: ''
     });
 
     useEffect(() => {
@@ -30,8 +29,7 @@ function JournalForm() {
                 content: journal.content,
                 mood: journal.mood,
                 tags: journal.tags ? journal.tags.join(', ') : '',
-                context: journal.context || '',
-                lifePhaseName: journal.lifePhaseName || ''
+                context: journal.context || ''
             });
         } catch (error) {
             setError('Error loading journal');
@@ -54,7 +52,8 @@ function JournalForm() {
                 mood: formData.mood,
                 tags: formData.tags ? formData.tags.split(',').map(t => t.trim()).filter(t => t) : [],
                 context: formData.context,
-                lifePhaseName: formData.lifePhaseName
+                date: new Date().toISOString().split('T')[0], // Send current date
+                time: new Date().toLocaleTimeString('en-US', { hour12: false }) // Send current time HH:MM:SS
             };
 
             if (id) {
@@ -112,17 +111,6 @@ function JournalForm() {
                             value={formData.context}
                             onChange={handleChange}
                             placeholder="e.g., college, personal, family, work"
-                        />
-                    </div>
-
-                    <div className="input-group">
-                        <label>Life Phase</label>
-                        <input
-                            type="text"
-                            name="lifePhaseName"
-                            value={formData.lifePhaseName}
-                            onChange={handleChange}
-                            placeholder="e.g., College Years, Bangalore Phase"
                         />
                     </div>
                 </div>

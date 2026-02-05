@@ -1,0 +1,17 @@
+{
+    "folders": [
+        {
+            "path": "backend"
+        },
+        {
+            "path": "frontend"
+        }
+    ],
+    "settings": {
+        "java.configuration.updateBuildConfiguration": "automatic",
+        "java.import.maven.enabled": true,
+        "java.project.sourcePaths": [],
+        "java.project.outputPath": "",
+        "maven.view": "hierarchical"
+    }
+}

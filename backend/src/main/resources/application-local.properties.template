@@ -1,0 +1,7 @@
+# Template for Local Development Configuration
+# Copy this file to application-local.properties and fill in your secrets
+
+# JWT Secret - Generate a secure random key using:
+# PowerShell: [Convert]::ToBase64String((1..64 | ForEach-Object { Get-Random -Minimum 0 -Maximum 256 }))
+# Or online: https://generate-random.org/api-token-generator
+jwt.secret=YOUR_SECURE_JWT_SECRET_HERE
